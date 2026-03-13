@@ -1,0 +1,200 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Position {
+  GK
+  DEF
+  MID
+  FWD
+}
+
+enum RecommendationType {
+  CAPTAIN
+  DIFFERENTIAL
+  TRANSFER_IN
+  BUDGET_PICK
+  UNDERVALUED
+  WILDCARD
+}
+
+enum IngestionStatus {
+  PENDING
+  RUNNING
+  SUCCESS
+  FAILED
+}
+
+model Team {
+  id              Int       @id @default(autoincrement())
+  externalId      Int       @unique
+  name            String
+  shortName       String
+  strengthAttack  Int       @default(0)
+  strengthDefense Int       @default(0)
+  players         Player[]
+  homeFixtures    Fixture[] @relation("FixtureHomeTeam")
+  awayFixtures    Fixture[] @relation("FixtureAwayTeam")
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model Player {
+  id              Int              @id @default(autoincrement())
+  externalId      Int              @unique
+  teamId          Int
+  team            Team             @relation(fields: [teamId], references: [id])
+  firstName       String
+  lastName        String
+  displayName     String
+  position        Position
+  price           Decimal          @db.Decimal(5, 2)
+  ownershipPct    Decimal          @default(0) @db.Decimal(5, 2)
+  status          String           @default("available")
+  minutesSeason   Int              @default(0)
+  selectedByPct   Decimal          @default(0) @db.Decimal(5, 2)
+  matchStats      MatchStat[]
+  metrics         PlayerMetric[]
+  recommendations Recommendation[]
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  @@index([teamId])
+}
+
+model Gameweek {
+  id              Int              @id @default(autoincrement())
+  externalId      Int              @unique
+  number          Int              @unique
+  deadlineAt      DateTime
+  isCurrent       Boolean          @default(false)
+  isFinished      Boolean          @default(false)
+  fixtures        Fixture[]
+  metrics         PlayerMetric[]
+  recommendations Recommendation[]
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+}
+
+model Fixture {
+  id             Int         @id @default(autoincrement())
+  externalId     Int         @unique
+  gameweekId     Int
+  homeTeamId     Int
+  awayTeamId     Int
+  gameweek       Gameweek    @relation(fields: [gameweekId], references: [id])
+  homeTeam       Team        @relation("FixtureHomeTeam", fields: [homeTeamId], references: [id])
+  awayTeam       Team        @relation("FixtureAwayTeam", fields: [awayTeamId], references: [id])
+  kickoffAt      DateTime
+  homeDifficulty Int
+  awayDifficulty Int
+  isFinished     Boolean     @default(false)
+  matchStats     MatchStat[]
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+
+  @@index([gameweekId])
+  @@index([homeTeamId])
+  @@index([awayTeamId])
+}
+
+model MatchStat {
+  id            Int      @id @default(autoincrement())
+  playerId      Int
+  fixtureId     Int
+  player        Player   @relation(fields: [playerId], references: [id])
+  fixture       Fixture  @relation(fields: [fixtureId], references: [id])
+  minutes       Int      @default(0)
+  goals         Int      @default(0)
+  assists       Int      @default(0)
+  cleanSheet    Boolean  @default(false)
+  xg            Decimal  @default(0) @db.Decimal(6, 3)
+  xa            Decimal  @default(0) @db.Decimal(6, 3)
+  shots         Int      @default(0)
+  keyPasses     Int      @default(0)
+  yellowCards   Int      @default(0)
+  redCards      Int      @default(0)
+  saves         Int      @default(0)
+  bonus         Int      @default(0)
+  fantasyPoints Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@unique([playerId, fixtureId])
+  @@index([playerId])
+  @@index([fixtureId])
+}
+
+model PlayerMetric {
+  id                   Int      @id @default(autoincrement())
+  playerId             Int
+  gameweekId           Int
+  player               Player   @relation(fields: [playerId], references: [id])
+  gameweek             Gameweek @relation(fields: [gameweekId], references: [id])
+  formScore            Decimal  @default(0) @db.Decimal(6, 3)
+  fixtureScore         Decimal  @default(0) @db.Decimal(6, 3)
+  upsideScore          Decimal  @default(0) @db.Decimal(6, 3)
+  consistencyScore     Decimal  @default(0) @db.Decimal(6, 3)
+  differentialScore    Decimal  @default(0) @db.Decimal(6, 3)
+  captaincyScore       Decimal  @default(0) @db.Decimal(6, 3)
+  transferScore        Decimal  @default(0) @db.Decimal(6, 3)
+  valueScore           Decimal  @default(0) @db.Decimal(6, 3)
+  minutesSecurityScore Decimal  @default(0) @db.Decimal(6, 3)
+  projectedPoints      Decimal  @default(0) @db.Decimal(6, 3)
+  confidenceScore      Decimal  @default(0) @db.Decimal(6, 3)
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  @@unique([playerId, gameweekId])
+  @@index([gameweekId])
+  @@index([playerId])
+}
+
+model Recommendation {
+  id              Int                @id @default(autoincrement())
+  gameweekId      Int
+  playerId        Int
+  type            RecommendationType
+  gameweek        Gameweek           @relation(fields: [gameweekId], references: [id])
+  player          Player             @relation(fields: [playerId], references: [id])
+  score           Decimal            @db.Decimal(6, 3)
+  confidenceScore Decimal            @default(0) @db.Decimal(6, 3)
+  title           String
+  explanation     String
+  explanationJson Json?
+  modelVersion    String             @default("v0")
+  createdAt       DateTime           @default(now())
+  updatedAt       DateTime           @updatedAt
+
+  @@index([gameweekId])
+  @@index([playerId])
+  @@index([type])
+}
+
+model Conversation {
+  id         Int      @id @default(autoincrement())
+  userId     String?
+  message    String
+  answer     String
+  answerJson Json?
+  createdAt  DateTime @default(now())
+}
+
+model IngestionRun {
+  id               Int             @id @default(autoincrement())
+  source           String
+  status           IngestionStatus @default(PENDING)
+  startedAt        DateTime
+  completedAt      DateTime?
+  recordsProcessed Int             @default(0)
+  errorMessage     String?
+  createdAt        DateTime        @default(now())
+
+  @@index([status])
+  @@index([source])
+}

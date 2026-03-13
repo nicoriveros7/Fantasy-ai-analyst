@@ -1,0 +1,22 @@
+{
+  "name": "fantasy-ai-analyst",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@9.12.0",
+  "scripts": {
+    "dev:api": "pnpm --filter @fantasy-ai-analyst/api start:dev",
+    "dev:ai": "uvicorn app.main:app --app-dir apps/ai-service --host 0.0.0.0 --port 8001 --reload",
+    "prisma:generate": "prisma generate --schema prisma/schema.prisma",
+    "prisma:format": "prisma format --schema prisma/schema.prisma",
+    "prisma:seed": "node prisma/seed.js"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0"
+  },
+  "devDependencies": {
+    "prisma": "^5.20.0"
+  }
+}

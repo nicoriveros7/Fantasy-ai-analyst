@@ -1,0 +1,1 @@
+export const FANTASY_DATA_PROVIDER = Symbol('FANTASY_DATA_PROVIDER');

@@ -1,0 +1,163 @@
+{
+  "teams": [
+    { "externalId": 101, "name": "Arsenal", "shortName": "ARS", "strengthAttack": 88, "strengthDefense": 85 },
+    { "externalId": 102, "name": "Liverpool", "shortName": "LIV", "strengthAttack": 90, "strengthDefense": 82 },
+    { "externalId": 103, "name": "Manchester City", "shortName": "MCI", "strengthAttack": 92, "strengthDefense": 84 },
+    { "externalId": 104, "name": "Tottenham", "shortName": "TOT", "strengthAttack": 84, "strengthDefense": 74 },
+    { "externalId": 105, "name": "Newcastle", "shortName": "NEW", "strengthAttack": 80, "strengthDefense": 78 }
+  ],
+  "gameweeks": [
+    { "externalId": 1, "number": 1, "deadlineAt": "2026-08-14T17:00:00.000Z", "isCurrent": false, "isFinished": true },
+    { "externalId": 2, "number": 2, "deadlineAt": "2026-08-21T17:00:00.000Z", "isCurrent": false, "isFinished": true },
+    { "externalId": 3, "number": 3, "deadlineAt": "2026-08-28T17:00:00.000Z", "isCurrent": true, "isFinished": false }
+  ],
+  "players": [
+    { "externalId": 1001, "teamExternalId": 101, "firstName": "David", "lastName": "Raya", "displayName": "David Raya", "position": "GK", "price": 5.5, "ownershipPct": 21.4, "status": "available", "minutesSeason": 180, "selectedByPct": 21.4 },
+    { "externalId": 1002, "teamExternalId": 101, "firstName": "Ben", "lastName": "White", "displayName": "Ben White", "position": "DEF", "price": 5.6, "ownershipPct": 14.7, "status": "available", "minutesSeason": 180, "selectedByPct": 14.7 },
+    { "externalId": 1003, "teamExternalId": 101, "firstName": "Bukayo", "lastName": "Saka", "displayName": "Bukayo Saka", "position": "MID", "price": 10.2, "ownershipPct": 38.9, "status": "available", "minutesSeason": 176, "selectedByPct": 38.9 },
+    { "externalId": 1004, "teamExternalId": 101, "firstName": "Kai", "lastName": "Havertz", "displayName": "Kai Havertz", "position": "FWD", "price": 7.8, "ownershipPct": 16.2, "status": "available", "minutesSeason": 162, "selectedByPct": 16.2 },
+
+    { "externalId": 1005, "teamExternalId": 102, "firstName": "Alisson", "lastName": "Becker", "displayName": "Alisson", "position": "GK", "price": 5.5, "ownershipPct": 10.1, "status": "available", "minutesSeason": 180, "selectedByPct": 10.1 },
+    { "externalId": 1006, "teamExternalId": 102, "firstName": "Trent", "lastName": "Alexander-Arnold", "displayName": "Trent Alexander-Arnold", "position": "DEF", "price": 8.0, "ownershipPct": 24.6, "status": "available", "minutesSeason": 170, "selectedByPct": 24.6 },
+    { "externalId": 1007, "teamExternalId": 102, "firstName": "Mohamed", "lastName": "Salah", "displayName": "Mohamed Salah", "position": "MID", "price": 12.6, "ownershipPct": 48.1, "status": "available", "minutesSeason": 178, "selectedByPct": 48.1 },
+    { "externalId": 1008, "teamExternalId": 102, "firstName": "Darwin", "lastName": "Nunez", "displayName": "Darwin Nunez", "position": "FWD", "price": 7.6, "ownershipPct": 12.8, "status": "available", "minutesSeason": 144, "selectedByPct": 12.8 },
+
+    { "externalId": 1009, "teamExternalId": 103, "firstName": "Ederson", "lastName": "Moraes", "displayName": "Ederson", "position": "GK", "price": 5.4, "ownershipPct": 8.5, "status": "available", "minutesSeason": 180, "selectedByPct": 8.5 },
+    { "externalId": 1010, "teamExternalId": 103, "firstName": "Josko", "lastName": "Gvardiol", "displayName": "Josko Gvardiol", "position": "DEF", "price": 6.1, "ownershipPct": 11.2, "status": "available", "minutesSeason": 172, "selectedByPct": 11.2 },
+    { "externalId": 1011, "teamExternalId": 103, "firstName": "Phil", "lastName": "Foden", "displayName": "Phil Foden", "position": "MID", "price": 9.5, "ownershipPct": 26.9, "status": "available", "minutesSeason": 175, "selectedByPct": 26.9 },
+    { "externalId": 1012, "teamExternalId": 103, "firstName": "Erling", "lastName": "Haaland", "displayName": "Erling Haaland", "position": "FWD", "price": 14.1, "ownershipPct": 63.0, "status": "available", "minutesSeason": 170, "selectedByPct": 63.0 },
+
+    { "externalId": 1013, "teamExternalId": 104, "firstName": "Guglielmo", "lastName": "Vicario", "displayName": "Guglielmo Vicario", "position": "GK", "price": 5.1, "ownershipPct": 7.3, "status": "available", "minutesSeason": 180, "selectedByPct": 7.3 },
+    { "externalId": 1014, "teamExternalId": 104, "firstName": "Pedro", "lastName": "Porro", "displayName": "Pedro Porro", "position": "DEF", "price": 5.7, "ownershipPct": 18.4, "status": "available", "minutesSeason": 176, "selectedByPct": 18.4 },
+    { "externalId": 1015, "teamExternalId": 104, "firstName": "James", "lastName": "Maddison", "displayName": "James Maddison", "position": "MID", "price": 7.9, "ownershipPct": 20.2, "status": "available", "minutesSeason": 160, "selectedByPct": 20.2 },
+    { "externalId": 1016, "teamExternalId": 104, "firstName": "Son", "lastName": "Heung-min", "displayName": "Son Heung-min", "position": "FWD", "price": 10.0, "ownershipPct": 29.4, "status": "available", "minutesSeason": 174, "selectedByPct": 29.4 },
+
+    { "externalId": 1017, "teamExternalId": 105, "firstName": "Nick", "lastName": "Pope", "displayName": "Nick Pope", "position": "GK", "price": 5.3, "ownershipPct": 5.8, "status": "available", "minutesSeason": 180, "selectedByPct": 5.8 },
+    { "externalId": 1018, "teamExternalId": 105, "firstName": "Kieran", "lastName": "Trippier", "displayName": "Kieran Trippier", "position": "DEF", "price": 6.4, "ownershipPct": 9.1, "status": "available", "minutesSeason": 177, "selectedByPct": 9.1 },
+    { "externalId": 1019, "teamExternalId": 105, "firstName": "Anthony", "lastName": "Gordon", "displayName": "Anthony Gordon", "position": "MID", "price": 7.4, "ownershipPct": 17.2, "status": "available", "minutesSeason": 173, "selectedByPct": 17.2 },
+    { "externalId": 1020, "teamExternalId": 105, "firstName": "Alexander", "lastName": "Isak", "displayName": "Alexander Isak", "position": "FWD", "price": 8.6, "ownershipPct": 19.7, "status": "available", "minutesSeason": 168, "selectedByPct": 19.7 }
+  ],
+  "fixtures": [
+    {
+      "externalId": 5001,
+      "gameweekExternalId": 1,
+      "homeTeamExternalId": 101,
+      "awayTeamExternalId": 105,
+      "kickoffAt": "2026-08-16T14:00:00.000Z",
+      "homeDifficulty": 2,
+      "awayDifficulty": 4,
+      "isFinished": true
+    },
+    {
+      "externalId": 5002,
+      "gameweekExternalId": 1,
+      "homeTeamExternalId": 102,
+      "awayTeamExternalId": 103,
+      "kickoffAt": "2026-08-16T16:30:00.000Z",
+      "homeDifficulty": 3,
+      "awayDifficulty": 3,
+      "isFinished": true
+    },
+    {
+      "externalId": 5003,
+      "gameweekExternalId": 2,
+      "homeTeamExternalId": 103,
+      "awayTeamExternalId": 101,
+      "kickoffAt": "2026-08-23T15:00:00.000Z",
+      "homeDifficulty": 3,
+      "awayDifficulty": 4,
+      "isFinished": true
+    },
+    {
+      "externalId": 5004,
+      "gameweekExternalId": 2,
+      "homeTeamExternalId": 104,
+      "awayTeamExternalId": 102,
+      "kickoffAt": "2026-08-23T17:30:00.000Z",
+      "homeDifficulty": 3,
+      "awayDifficulty": 3,
+      "isFinished": true
+    },
+    {
+      "externalId": 5005,
+      "gameweekExternalId": 3,
+      "homeTeamExternalId": 105,
+      "awayTeamExternalId": 103,
+      "kickoffAt": "2026-08-30T14:00:00.000Z",
+      "homeDifficulty": 4,
+      "awayDifficulty": 2,
+      "isFinished": false
+    },
+    {
+      "externalId": 5006,
+      "gameweekExternalId": 3,
+      "homeTeamExternalId": 101,
+      "awayTeamExternalId": 104,
+      "kickoffAt": "2026-08-30T16:30:00.000Z",
+      "homeDifficulty": 2,
+      "awayDifficulty": 4,
+      "isFinished": false
+    }
+  ],
+  "matchStats": [
+    { "playerExternalId": 1001, "fixtureExternalId": 5001, "minutes": 90, "goals": 0, "assists": 0, "cleanSheet": true, "xg": 0.00, "xa": 0.00, "shots": 0, "keyPasses": 0, "yellowCards": 0, "redCards": 0, "saves": 4, "bonus": 2, "fantasyPoints": 8 },
+    { "playerExternalId": 1002, "fixtureExternalId": 5001, "minutes": 90, "goals": 0, "assists": 1, "cleanSheet": true, "xg": 0.05, "xa": 0.26, "shots": 1, "keyPasses": 2, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 1, "fantasyPoints": 9 },
+    { "playerExternalId": 1003, "fixtureExternalId": 5001, "minutes": 88, "goals": 1, "assists": 0, "cleanSheet": true, "xg": 0.74, "xa": 0.12, "shots": 4, "keyPasses": 2, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 3, "fantasyPoints": 12 },
+    { "playerExternalId": 1004, "fixtureExternalId": 5001, "minutes": 84, "goals": 0, "assists": 0, "cleanSheet": true, "xg": 0.33, "xa": 0.08, "shots": 3, "keyPasses": 1, "yellowCards": 1, "redCards": 0, "saves": 0, "bonus": 0, "fantasyPoints": 3 },
+
+    { "playerExternalId": 1017, "fixtureExternalId": 5001, "minutes": 90, "goals": 0, "assists": 0, "cleanSheet": false, "xg": 0.00, "xa": 0.00, "shots": 0, "keyPasses": 0, "yellowCards": 0, "redCards": 0, "saves": 5, "bonus": 1, "fantasyPoints": 4 },
+    { "playerExternalId": 1018, "fixtureExternalId": 5001, "minutes": 90, "goals": 0, "assists": 0, "cleanSheet": false, "xg": 0.04, "xa": 0.18, "shots": 1, "keyPasses": 3, "yellowCards": 1, "redCards": 0, "saves": 0, "bonus": 0, "fantasyPoints": 1 },
+    { "playerExternalId": 1019, "fixtureExternalId": 5001, "minutes": 79, "goals": 0, "assists": 0, "cleanSheet": false, "xg": 0.21, "xa": 0.06, "shots": 2, "keyPasses": 1, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 0, "fantasyPoints": 2 },
+    { "playerExternalId": 1020, "fixtureExternalId": 5001, "minutes": 86, "goals": 0, "assists": 0, "cleanSheet": false, "xg": 0.49, "xa": 0.04, "shots": 3, "keyPasses": 0, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 0, "fantasyPoints": 2 },
+
+    { "playerExternalId": 1005, "fixtureExternalId": 5002, "minutes": 90, "goals": 0, "assists": 0, "cleanSheet": false, "xg": 0.00, "xa": 0.00, "shots": 0, "keyPasses": 0, "yellowCards": 0, "redCards": 0, "saves": 3, "bonus": 0, "fantasyPoints": 2 },
+    { "playerExternalId": 1006, "fixtureExternalId": 5002, "minutes": 90, "goals": 0, "assists": 1, "cleanSheet": false, "xg": 0.06, "xa": 0.42, "shots": 1, "keyPasses": 4, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 2, "fantasyPoints": 8 },
+    { "playerExternalId": 1007, "fixtureExternalId": 5002, "minutes": 90, "goals": 1, "assists": 0, "cleanSheet": false, "xg": 0.67, "xa": 0.11, "shots": 5, "keyPasses": 2, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 3, "fantasyPoints": 11 },
+    { "playerExternalId": 1008, "fixtureExternalId": 5002, "minutes": 72, "goals": 0, "assists": 0, "cleanSheet": false, "xg": 0.45, "xa": 0.07, "shots": 3, "keyPasses": 1, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 0, "fantasyPoints": 2 },
+
+    { "playerExternalId": 1009, "fixtureExternalId": 5002, "minutes": 90, "goals": 0, "assists": 0, "cleanSheet": false, "xg": 0.00, "xa": 0.00, "shots": 0, "keyPasses": 0, "yellowCards": 0, "redCards": 0, "saves": 2, "bonus": 0, "fantasyPoints": 2 },
+    { "playerExternalId": 1010, "fixtureExternalId": 5002, "minutes": 90, "goals": 0, "assists": 0, "cleanSheet": false, "xg": 0.09, "xa": 0.03, "shots": 1, "keyPasses": 1, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 0, "fantasyPoints": 2 },
+    { "playerExternalId": 1011, "fixtureExternalId": 5002, "minutes": 87, "goals": 0, "assists": 1, "cleanSheet": false, "xg": 0.31, "xa": 0.39, "shots": 3, "keyPasses": 4, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 1, "fantasyPoints": 7 },
+    { "playerExternalId": 1012, "fixtureExternalId": 5002, "minutes": 90, "goals": 1, "assists": 0, "cleanSheet": false, "xg": 0.88, "xa": 0.05, "shots": 6, "keyPasses": 1, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 3, "fantasyPoints": 10 },
+
+    { "playerExternalId": 1009, "fixtureExternalId": 5003, "minutes": 90, "goals": 0, "assists": 0, "cleanSheet": false, "xg": 0.00, "xa": 0.00, "shots": 0, "keyPasses": 0, "yellowCards": 0, "redCards": 0, "saves": 3, "bonus": 0, "fantasyPoints": 2 },
+    { "playerExternalId": 1010, "fixtureExternalId": 5003, "minutes": 90, "goals": 0, "assists": 0, "cleanSheet": false, "xg": 0.10, "xa": 0.05, "shots": 1, "keyPasses": 1, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 0, "fantasyPoints": 2 },
+    { "playerExternalId": 1011, "fixtureExternalId": 5003, "minutes": 90, "goals": 1, "assists": 0, "cleanSheet": false, "xg": 0.52, "xa": 0.14, "shots": 4, "keyPasses": 2, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 2, "fantasyPoints": 9 },
+    { "playerExternalId": 1012, "fixtureExternalId": 5003, "minutes": 89, "goals": 1, "assists": 0, "cleanSheet": false, "xg": 0.94, "xa": 0.09, "shots": 6, "keyPasses": 1, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 3, "fantasyPoints": 10 },
+
+    { "playerExternalId": 1001, "fixtureExternalId": 5003, "minutes": 90, "goals": 0, "assists": 0, "cleanSheet": false, "xg": 0.00, "xa": 0.00, "shots": 0, "keyPasses": 0, "yellowCards": 0, "redCards": 0, "saves": 5, "bonus": 1, "fantasyPoints": 4 },
+    { "playerExternalId": 1002, "fixtureExternalId": 5003, "minutes": 90, "goals": 0, "assists": 0, "cleanSheet": false, "xg": 0.04, "xa": 0.15, "shots": 1, "keyPasses": 2, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 0, "fantasyPoints": 2 },
+    { "playerExternalId": 1003, "fixtureExternalId": 5003, "minutes": 90, "goals": 0, "assists": 1, "cleanSheet": false, "xg": 0.28, "xa": 0.41, "shots": 2, "keyPasses": 5, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 1, "fantasyPoints": 7 },
+    { "playerExternalId": 1004, "fixtureExternalId": 5003, "minutes": 86, "goals": 0, "assists": 0, "cleanSheet": false, "xg": 0.22, "xa": 0.10, "shots": 2, "keyPasses": 1, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 0, "fantasyPoints": 2 },
+
+    { "playerExternalId": 1013, "fixtureExternalId": 5004, "minutes": 90, "goals": 0, "assists": 0, "cleanSheet": true, "xg": 0.00, "xa": 0.00, "shots": 0, "keyPasses": 0, "yellowCards": 0, "redCards": 0, "saves": 4, "bonus": 2, "fantasyPoints": 8 },
+    { "playerExternalId": 1014, "fixtureExternalId": 5004, "minutes": 90, "goals": 0, "assists": 1, "cleanSheet": true, "xg": 0.08, "xa": 0.31, "shots": 1, "keyPasses": 3, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 2, "fantasyPoints": 10 },
+    { "playerExternalId": 1015, "fixtureExternalId": 5004, "minutes": 85, "goals": 1, "assists": 0, "cleanSheet": true, "xg": 0.46, "xa": 0.21, "shots": 3, "keyPasses": 3, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 3, "fantasyPoints": 12 },
+    { "playerExternalId": 1016, "fixtureExternalId": 5004, "minutes": 90, "goals": 1, "assists": 1, "cleanSheet": true, "xg": 0.71, "xa": 0.28, "shots": 5, "keyPasses": 3, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 3, "fantasyPoints": 15 },
+
+    { "playerExternalId": 1005, "fixtureExternalId": 5004, "minutes": 90, "goals": 0, "assists": 0, "cleanSheet": false, "xg": 0.00, "xa": 0.00, "shots": 0, "keyPasses": 0, "yellowCards": 0, "redCards": 0, "saves": 3, "bonus": 0, "fantasyPoints": 2 },
+    { "playerExternalId": 1006, "fixtureExternalId": 5004, "minutes": 90, "goals": 0, "assists": 0, "cleanSheet": false, "xg": 0.05, "xa": 0.17, "shots": 1, "keyPasses": 2, "yellowCards": 1, "redCards": 0, "saves": 0, "bonus": 0, "fantasyPoints": 1 },
+    { "playerExternalId": 1007, "fixtureExternalId": 5004, "minutes": 90, "goals": 1, "assists": 0, "cleanSheet": false, "xg": 0.62, "xa": 0.12, "shots": 4, "keyPasses": 2, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 1, "fantasyPoints": 8 },
+    { "playerExternalId": 1008, "fixtureExternalId": 5004, "minutes": 71, "goals": 0, "assists": 0, "cleanSheet": false, "xg": 0.29, "xa": 0.05, "shots": 2, "keyPasses": 0, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 0, "fantasyPoints": 2 },
+
+    { "playerExternalId": 1017, "fixtureExternalId": 5005, "minutes": 90, "goals": 0, "assists": 0, "cleanSheet": false, "xg": 0.00, "xa": 0.00, "shots": 0, "keyPasses": 0, "yellowCards": 0, "redCards": 0, "saves": 6, "bonus": 2, "fantasyPoints": 5 },
+    { "playerExternalId": 1018, "fixtureExternalId": 5005, "minutes": 90, "goals": 0, "assists": 1, "cleanSheet": false, "xg": 0.07, "xa": 0.33, "shots": 1, "keyPasses": 4, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 1, "fantasyPoints": 7 },
+    { "playerExternalId": 1019, "fixtureExternalId": 5005, "minutes": 89, "goals": 1, "assists": 0, "cleanSheet": false, "xg": 0.57, "xa": 0.13, "shots": 4, "keyPasses": 1, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 2, "fantasyPoints": 9 },
+    { "playerExternalId": 1020, "fixtureExternalId": 5005, "minutes": 90, "goals": 1, "assists": 0, "cleanSheet": false, "xg": 0.79, "xa": 0.10, "shots": 5, "keyPasses": 1, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 3, "fantasyPoints": 10 },
+
+    { "playerExternalId": 1009, "fixtureExternalId": 5005, "minutes": 90, "goals": 0, "assists": 0, "cleanSheet": false, "xg": 0.00, "xa": 0.00, "shots": 0, "keyPasses": 0, "yellowCards": 0, "redCards": 0, "saves": 2, "bonus": 0, "fantasyPoints": 2 },
+    { "playerExternalId": 1010, "fixtureExternalId": 5005, "minutes": 90, "goals": 0, "assists": 0, "cleanSheet": false, "xg": 0.04, "xa": 0.02, "shots": 1, "keyPasses": 1, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 0, "fantasyPoints": 2 },
+    { "playerExternalId": 1011, "fixtureExternalId": 5005, "minutes": 87, "goals": 0, "assists": 1, "cleanSheet": false, "xg": 0.26, "xa": 0.44, "shots": 2, "keyPasses": 5, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 1, "fantasyPoints": 7 },
+    { "playerExternalId": 1012, "fixtureExternalId": 5005, "minutes": 90, "goals": 1, "assists": 0, "cleanSheet": false, "xg": 0.91, "xa": 0.08, "shots": 7, "keyPasses": 1, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 3, "fantasyPoints": 10 },
+
+    { "playerExternalId": 1001, "fixtureExternalId": 5006, "minutes": 90, "goals": 0, "assists": 0, "cleanSheet": true, "xg": 0.00, "xa": 0.00, "shots": 0, "keyPasses": 0, "yellowCards": 0, "redCards": 0, "saves": 3, "bonus": 2, "fantasyPoints": 8 },
+    { "playerExternalId": 1002, "fixtureExternalId": 5006, "minutes": 90, "goals": 0, "assists": 0, "cleanSheet": true, "xg": 0.03, "xa": 0.13, "shots": 1, "keyPasses": 2, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 1, "fantasyPoints": 6 },
+    { "playerExternalId": 1003, "fixtureExternalId": 5006, "minutes": 90, "goals": 1, "assists": 1, "cleanSheet": true, "xg": 0.69, "xa": 0.35, "shots": 4, "keyPasses": 4, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 3, "fantasyPoints": 15 },
+    { "playerExternalId": 1004, "fixtureExternalId": 5006, "minutes": 87, "goals": 1, "assists": 0, "cleanSheet": true, "xg": 0.63, "xa": 0.11, "shots": 4, "keyPasses": 1, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 2, "fantasyPoints": 11 },
+
+    { "playerExternalId": 1013, "fixtureExternalId": 5006, "minutes": 90, "goals": 0, "assists": 0, "cleanSheet": false, "xg": 0.00, "xa": 0.00, "shots": 0, "keyPasses": 0, "yellowCards": 0, "redCards": 0, "saves": 4, "bonus": 1, "fantasyPoints": 3 },
+    { "playerExternalId": 1014, "fixtureExternalId": 5006, "minutes": 90, "goals": 0, "assists": 0, "cleanSheet": false, "xg": 0.07, "xa": 0.22, "shots": 1, "keyPasses": 3, "yellowCards": 1, "redCards": 0, "saves": 0, "bonus": 0, "fantasyPoints": 1 },
+    { "playerExternalId": 1015, "fixtureExternalId": 5006, "minutes": 86, "goals": 0, "assists": 0, "cleanSheet": false, "xg": 0.24, "xa": 0.19, "shots": 2, "keyPasses": 2, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 0, "fantasyPoints": 2 },
+    { "playerExternalId": 1016, "fixtureExternalId": 5006, "minutes": 90, "goals": 0, "assists": 0, "cleanSheet": false, "xg": 0.41, "xa": 0.10, "shots": 3, "keyPasses": 1, "yellowCards": 0, "redCards": 0, "saves": 0, "bonus": 0, "fantasyPoints": 2 }
+  ]
+}
