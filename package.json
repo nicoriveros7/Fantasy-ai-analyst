@@ -5,7 +5,9 @@
   "packageManager": "pnpm@9.12.0",
   "scripts": {
     "dev:api": "pnpm --filter @fantasy-ai-analyst/api start:dev",
+    "dev:web": "pnpm --filter @fantasy-ai-analyst/web dev",
     "dev:ai": "uvicorn app.main:app --app-dir apps/ai-service --host 0.0.0.0 --port 8001 --reload",
+    "build:web": "pnpm --filter @fantasy-ai-analyst/web build",
     "prisma:generate": "prisma generate --schema prisma/schema.prisma",
     "prisma:format": "prisma format --schema prisma/schema.prisma",
     "prisma:seed": "node prisma/seed.js"

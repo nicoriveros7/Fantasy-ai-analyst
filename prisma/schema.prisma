@@ -66,6 +66,7 @@ model Player {
   matchStats      MatchStat[]
   metrics         PlayerMetric[]
   recommendations Recommendation[]
+  teamSnapshots   UserTeamPlayer[]
   createdAt       DateTime         @default(now())
   updatedAt       DateTime         @updatedAt
 
@@ -218,4 +219,28 @@ model IngestionRun {
 
   @@index([status])
   @@index([source])
+}
+
+model UserTeamSnapshot {
+  id            Int              @id @default(autoincrement())
+  gameweek      Int
+  budget        Decimal          @db.Decimal(6, 2)
+  freeTransfers Int              @default(1)
+  players       UserTeamPlayer[]
+  createdAt     DateTime         @default(now())
+
+  @@index([gameweek])
+  @@index([createdAt])
+}
+
+model UserTeamPlayer {
+  id         Int              @id @default(autoincrement())
+  snapshotId Int
+  playerId   Int
+  snapshot   UserTeamSnapshot @relation(fields: [snapshotId], references: [id], onDelete: Cascade)
+  player     Player           @relation(fields: [playerId], references: [id], onDelete: Restrict)
+
+  @@index([snapshotId])
+  @@index([playerId])
+  @@unique([snapshotId, playerId])
 }

@@ -10,5 +10,6 @@ import { MessagesService } from './messages.service';
   imports: [PrismaModule],
   controllers: [ChatController],
   providers: [ChatService, ConversationsService, MessagesService, AiClientService],
+  exports: [AiClientService],
 })
 export class ChatModule {}

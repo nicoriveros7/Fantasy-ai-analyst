@@ -12,3 +12,11 @@ coverage
 
 # Prisma
 prisma/migrations
+
+# Next.js / frontend artifacts
+.next
+out
+.vercel
+apps/web/.next
+apps/web/out
+apps/web/.vercel

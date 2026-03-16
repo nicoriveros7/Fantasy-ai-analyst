@@ -1,7 +1,15 @@
 import { Injectable } from '@nestjs/common';
 import { access, readFile } from 'fs/promises';
 import { resolve } from 'path';
-import { FantasyBootstrapData, FantasyDataProvider } from '../fantasy-data-provider.interface';
+import {
+  FantasyBootstrapData,
+  FantasyDataProvider,
+  ProviderFixture,
+  ProviderGameweek,
+  ProviderPlayer,
+  ProviderPlayerStat,
+  ProviderTeam,
+} from '../fantasy-data-provider.interface';
 
 @Injectable()
 export class SeedDataProvider implements FantasyDataProvider {
@@ -11,6 +19,31 @@ export class SeedDataProvider implements FantasyDataProvider {
     const filePath = await this.resolveSeedDataPath();
     const content = await readFile(filePath, 'utf-8');
     return JSON.parse(content) as FantasyBootstrapData;
+  }
+
+  async getTeams(): Promise<ProviderTeam[]> {
+    const data = await this.getBootstrapData();
+    return data.teams;
+  }
+
+  async getPlayers(): Promise<ProviderPlayer[]> {
+    const data = await this.getBootstrapData();
+    return data.players;
+  }
+
+  async getGameweeks(): Promise<ProviderGameweek[]> {
+    const data = await this.getBootstrapData();
+    return data.gameweeks;
+  }
+
+  async getFixtures(): Promise<ProviderFixture[]> {
+    const data = await this.getBootstrapData();
+    return data.fixtures;
+  }
+
+  async getPlayerStats(playerExternalId: number): Promise<ProviderPlayerStat[]> {
+    const data = await this.getBootstrapData();
+    return data.matchStats.filter((item) => item.playerExternalId === playerExternalId);
   }
 
   private async resolveSeedDataPath() {
