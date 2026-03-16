@@ -30,6 +30,11 @@ enum IngestionStatus {
   FAILED
 }
 
+enum MessageRole {
+  USER
+  ASSISTANT
+}
+
 model Team {
   id              Int       @id @default(autoincrement())
   externalId      Int       @unique
@@ -177,12 +182,28 @@ model Recommendation {
 }
 
 model Conversation {
-  id         Int      @id @default(autoincrement())
+  id         Int       @id @default(autoincrement())
   userId     String?
-  message    String
-  answer     String
+  message    String?
+  answer     String?
   answerJson Json?
-  createdAt  DateTime @default(now())
+  messages   Message[]
+  createdAt  DateTime  @default(now())
+}
+
+model Message {
+  id               Int          @id @default(autoincrement())
+  conversationId   Int
+  conversation     Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  role             MessageRole
+  content          String
+  confidence       Float?
+  usedTools        Json?
+  structuredContext Json?
+  createdAt        DateTime     @default(now())
+
+  @@index([conversationId])
+  @@index([role])
 }
 
 model IngestionRun {

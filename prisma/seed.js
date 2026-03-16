@@ -31,6 +31,7 @@ async function loadSeedData() {
 }
 
 async function resetData() {
+  await prisma.message.deleteMany();
   await prisma.matchStat.deleteMany();
   await prisma.recommendation.deleteMany();
   await prisma.playerMetric.deleteMany();

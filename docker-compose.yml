@@ -46,11 +46,14 @@ services:
       - .env
     environment:
       PORT: ${AI_SERVICE_PORT:-8001}
+      BACKEND_API_URL: http://api:3000/api
     ports:
       - "${AI_SERVICE_PORT:-8001}:8001"
     depends_on:
       postgres:
         condition: service_healthy
+      api:
+        condition: service_started
 
 volumes:
   postgres_data:

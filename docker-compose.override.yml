@@ -1,0 +1,25 @@
+services:
+  api:
+    command: pnpm exec ts-node src/main.ts
+    environment:
+      CHOKIDAR_USEPOLLING: "1"
+      CHOKIDAR_INTERVAL: "500"
+    volumes:
+      - ./apps/api:/workspace/apps/api
+      - ./prisma:/workspace/prisma
+
+  ai-service:
+    command:
+      [
+        "uvicorn",
+        "app.main:app",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8001",
+        "--reload",
+        "--reload-dir",
+        "/app/app"
+      ]
+    volumes:
+      - ./apps/ai-service/app:/app/app

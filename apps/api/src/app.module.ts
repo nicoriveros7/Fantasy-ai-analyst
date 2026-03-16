@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { AiModule } from './ai/ai.module';
+import { ChatModule } from './chat/chat.module';
 import { FixturesModule } from './fixtures/fixtures.module';
 import { HealthModule } from './health/health.module';
 import { IngestionModule } from './ingestion/ingestion.module';
@@ -16,6 +17,7 @@ import { TeamsModule } from './teams/teams.module';
     FixturesModule,
     RecommendationsModule,
     AiModule,
+    ChatModule,
     IngestionModule,
     PrismaModule,
   ],
